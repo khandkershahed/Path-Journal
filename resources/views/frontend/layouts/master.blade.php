@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{ asset($settings['site_favicon']) }}" type="image/png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <link href="{{ asset('frontend/assets/css/custom.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('frontend/assets/css/custom.css') }}" rel="stylesheet"> --}}
     <link href="{{ asset('frontend/assets/css/styles.css') }}" rel="stylesheet">
     <style>
         :root {
