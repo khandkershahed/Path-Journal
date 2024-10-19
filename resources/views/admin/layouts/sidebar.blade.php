@@ -6,10 +6,10 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="index.html">{{ __('admin.Stisla') }}</a>
+            <a href="{{ route('admin.dashboard') }}">{{ __('admin.ThePathJournal') }}</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">{{ __('admin.St') }}</a>
+            <a href="{{ route('admin.dashboard') }}">{{ __('admin.PJ') }}</a>
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">{{ __('admin.Dashboard') }}</li>

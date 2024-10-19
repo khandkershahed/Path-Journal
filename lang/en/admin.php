@@ -106,6 +106,8 @@ return array (
   'Profile' => 'Profile',
   'Settings' => 'Settings',
   'Logout' => 'Logout',
+  'ThePathJournal' => 'ThePathJournal',
+  'TPJ' => 'TPJ',
   'Stisla' => 'Stisla',
   'St' => 'St',
   'Starter' => 'Starter',

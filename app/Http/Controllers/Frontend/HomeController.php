@@ -32,7 +32,7 @@ class HomeController extends Controller
             ->withLocalize()
             ->orderBy('id', 'DESC')->take(7)
             ->get();
-
+ 
         $recentNews = News::with(['category', 'auther'])->activeEntries()->withLocalize()
             ->orderBy('id', 'DESC')->take(6)->get();
         $popularNews = News::with(['category'])->where('show_at_popular', 1)
