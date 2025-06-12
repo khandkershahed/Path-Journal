@@ -2,7 +2,7 @@
     <div class="wrapper__section__components">
         <!-- Footer -->
         <footer>
-            <div class="wrapper__footer bg__footer-dark pb-0">
+            <div class="wrapper__footer bg__footer-dark pb-4">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4">
@@ -98,15 +98,12 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="border-top-1 bg__footer-bottom-section">
-                                <p class="text-white text-center">
+                                <p class="text-white text-center mb-0">
                                     {{ $footerInfo->copyright }}</p>
-
                             </div>
-
                         </div>
                     </div>
                 </div>
-
             </div>
         </footer>
     </div>

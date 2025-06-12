@@ -16863,7 +16863,8 @@ body.offcanvas-active {
 }
 
 .bg__footer-bottom-section {
-    padding: 2rem 0
+    padding: 1rem 0
+    /* padding: 2rem 0 */
 }
 
 .bg__footer-bottom-section .list-inline {
