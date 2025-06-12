@@ -59,7 +59,7 @@
         background-color: #dc3545;
         /* Bootstrap red */
         color: white;
-        padding: 10px 0;
+        padding: 0px;
         font-family: 'Arial', sans-serif;
         overflow: hidden;
         position: relative;
@@ -68,7 +68,7 @@
 
     .breaking-news-label {
         background-color: #a71d2a;
-        padding: 8px 16px;
+        padding: 1em;
         font-weight: bold;
         font-size: 14px;
         text-transform: uppercase;
@@ -85,14 +85,14 @@
         display: inline-block;
         white-space: nowrap;
         padding-left: 100%;
-        animation: ticker-scroll 30s linear infinite;
+        animation: ticker-scroll 40s linear infinite;
     }
 
     .ticker-item {
         display: inline-block;
         color: white;
         text-decoration: none;
-        font-size: 14px;
+        font-size: 1.2em;
         font-weight: 500;
         margin-right: 30px;
     }
@@ -121,21 +121,35 @@
     .ticker-wrapper:hover .ticker-move {
         animation-play-state: paused;
     }
+
+    @media screen and (min-width: 320px) and (max-width: 575px) {
+        .breaking-news-label {
+            padding: 13px 7px;
+            font-size: 11px;
+        }
+
+        .ticker-item {
+            font-size: 1em;
+            margin-right: 30px;
+        }
+    }
 </style>
 
 @if ($breakingNews->count() > 0)
-    <section class="breaking-news-ticker">
-        <div class="breaking-news-label">
-            {{ __('Breaking News') }}
-        </div>
-        <div class="ticker-wrapper">
-            <div class="ticker-move">
-                @foreach ($breakingNews as $news)
-                    <a href="{{ route('news-details', $news->slug) }}" class="ticker-item">
-                        {{ truncate($news->title, 80) }}
-                    </a>
-                    <span class="separator">&bull;</span>
-                @endforeach
+    <section class="container">
+        <div class="breaking-news-ticker">
+            <div class="breaking-news-label">
+                {{ __('Breaking News') }}
+            </div>
+            <div class="ticker-wrapper">
+                <div class="ticker-move">
+                    @foreach ($breakingNews as $news)
+                        <a href="{{ route('news-details', $news->slug) }}" class="ticker-item">
+                            {{ truncate($news->title, 80) }}
+                        </a>
+                        <span class="separator">&bull;</span>
+                    @endforeach
+                </div>
             </div>
         </div>
     </section>
