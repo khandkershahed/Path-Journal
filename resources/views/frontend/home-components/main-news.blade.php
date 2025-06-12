@@ -29,11 +29,11 @@
                                         </div>
                                         <div class="card__post__author-info">
                                             <ul class="list-inline">
-                                                <li class="list-inline-item">
+                                                {{-- <li class="list-inline-item">
                                                     <a href="blog_details.html">
                                                         {{ __('frontend.by') }} {{ $news->auther->name }}
                                                     </a>
-                                                </li>
+                                                </li> --}}
                                                 <li class="list-inline-item">
                                                     <span>
                                                         {{ date('M d, Y', strtotime($news->created_at)) }}
@@ -70,11 +70,11 @@
 
                                                 <div class="card__post__author-info mb-2">
                                                     <ul class="list-inline">
-                                                        <li class="list-inline-item">
+                                                        {{-- <li class="list-inline-item">
                                                             <span class="text-primary">
                                                                 {{ __('frontend.by') }} {{ $news->auther->name }}
                                                             </span>
-                                                        </li>
+                                                        </li> --}}
                                                         <li class="list-inline-item">
                                                             <span class="text-dark text-capitalize">
                                                                 {{ date('M d, Y', strtotime($news->created_at)) }}
@@ -117,11 +117,11 @@
 
                                                 <div class="card__post__author-info mb-2">
                                                     <ul class="list-inline">
-                                                        <li class="list-inline-item">
+                                                        {{-- <li class="list-inline-item">
                                                             <span class="text-primary">
                                                                 {{ __('frontend.by') }} {{ $news->auther->name }}
                                                             </span>
-                                                        </li>
+                                                        </li> --}}
                                                         <li class="list-inline-item">
                                                             <span class="text-dark text-capitalize">
                                                                 {{ date('M d, Y', strtotime($news->created_at)) }}
@@ -207,11 +207,11 @@
                             </div>
                             <div class="article__content">
                                 <ul class="list-inline">
-                                    <li class="list-inline-item">
+                                    {{-- <li class="list-inline-item">
                                         <span class="text-primary">
                                             {{ __('frontend.by') }} {{ $sectionOneNews->auther->name }}
                                         </span>
-                                    </li>
+                                    </li> --}}
                                     <li class="list-inline-item">
                                         <span>
                                             {{ date('M d, Y', strtotime($sectionOneNews->created_at)) }}
@@ -260,11 +260,11 @@
                             </div>
                             <div class="article__content">
                                 <ul class="list-inline">
-                                    <li class="list-inline-item">
+                                    {{-- <li class="list-inline-item">
                                         <span class="text-primary">
                                             {{ __('frontend.by') }} {{ $sectionTwoNews->auther->name }}
                                         </span>
-                                    </li>
+                                    </li> --}}
                                     <li class="list-inline-item">
                                         <span>
                                             {{ date('M d, Y', strtotime($sectionTwoNews->created_at)) }}
@@ -312,11 +312,11 @@
                                         </div>
                                         <div class="article__content">
                                             <ul class="list-inline">
-                                                <li class="list-inline-item">
+                                                {{-- <li class="list-inline-item">
                                                     <span class="text-primary">
                                                         {{ __('frontend.by') }} {{ $sectionThreeNews->auther->name }}
                                                     </span>
-                                                </li>
+                                                </li> --}}
                                                 <li class="list-inline-item">
                                                     <span>
 
@@ -351,11 +351,11 @@
                                         </div>
                                         <div class="article__content">
                                             <ul class="list-inline">
-                                                <li class="list-inline-item">
+                                                {{-- <li class="list-inline-item">
                                                     <span class="text-primary">
                                                         {{ __('frontend.by') }} {{ $sectionThreeNews->auther->name }}
                                                     </span>
-                                                </li>
+                                                </li> --}}
                                                 <li class="list-inline-item">
                                                     <span>
 
@@ -414,11 +414,11 @@
                                                 </div>
                                                 <div class="card__post__author-info mb-2">
                                                     <ul class="list-inline">
-                                                        <li class="list-inline-item">
+                                                        {{-- <li class="list-inline-item">
                                                             <span class="text-primary">
                                                                 {{ __('frontend.by') }} {{ $sectionFourNews->auther->name }}
                                                             </span>
-                                                        </li>
+                                                        </li> --}}
                                                         <li class="list-inline-item">
                                                             <span class="text-dark text-capitalize">
 
@@ -470,11 +470,11 @@
                                             {{ $mostViewedNews->category->name }}
                                         </div>
                                         <ul class="list-inline">
-                                            <li class="list-inline-item">
+                                            {{-- <li class="list-inline-item">
                                                 <span class="text-primary">
                                                     {{ __('frontend.by') }} {{ $mostViewedNews->auther->name }}
                                                 </span>
-                                            </li>
+                                            </li> --}}
                                             <li class="list-inline-item">
                                                 <span class="text-dark text-capitalize">
                                                     {{ date('M d, Y', strtotime($mostViewedNews->created_at)) }}
@@ -510,11 +510,11 @@
                                                 <div class="card__post__content">
                                                     <div class="card__post__author-info mb-2">
                                                         <ul class="list-inline">
-                                                            <li class="list-inline-item">
+                                                            {{-- <li class="list-inline-item">
                                                                 <span class="text-primary">
                                                                     {{ __('frontend.by') }} {{ $mostViewedNews->auther->name }}
                                                                 </span>
-                                                            </li>
+                                                            </li> --}}
                                                             <li class="list-inline-item">
                                                                 <span class="text-dark text-capitalize">
                                                                     {{ date('M d, Y', strtotime($mostViewedNews->created_at)) }}

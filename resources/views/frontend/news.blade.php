@@ -67,11 +67,11 @@
                                         {{ $post->category->name }}
                                     </div>
                                     <ul class="list-inline">
-                                        <li class="list-inline-item">
+                                        {{-- <li class="list-inline-item">
                                             <span class="text-primary">
                                                 {{ __('frontend.by') }} {{ $post->auther->name }}
                                             </span>
-                                        </li>
+                                        </li> --}}
                                         <li class="list-inline-item">
                                             <span class="text-dark text-capitalize">
                                                 {{ date('M d, Y', strtotime($post->created_at)) }}
@@ -128,11 +128,11 @@
 
                                             <div class="card__post__author-info mb-2">
                                                 <ul class="list-inline">
-                                                    <li class="list-inline-item">
+                                                    {{-- <li class="list-inline-item">
                                                         <span class="text-primary">
                                                             {{ __('frontend.by') }} {{ $news->auther->name }}
                                                         </span>
-                                                    </li>
+                                                    </li> --}}
                                                     <li class="list-inline-item">
                                                         <span class="text-dark text-capitalize">
                                                             {{ date('M d, Y', strtotime($news->created_at)) }}
@@ -168,11 +168,11 @@
                                         {{ $news->category->name }}
                                     </div>
                                     <ul class="list-inline">
-                                        <li class="list-inline-item">
+                                        {{-- <li class="list-inline-item">
                                             <span class="text-primary">
                                                 {{ __('frontend.by') }} {{ $news->auther->name }}
                                             </span>
-                                        </li>
+                                        </li> --}}
                                         <li class="list-inline-item">
                                             <span class="text-dark text-capitalize">
                                                 {{ date('M d, Y', strtotime($news->created_at)) }}
