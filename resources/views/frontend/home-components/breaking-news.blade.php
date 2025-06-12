@@ -99,6 +99,7 @@
 
     .ticker-item:hover {
         text-decoration: underline;
+        color: #edff03;
     }
 
     .separator {
@@ -136,7 +137,7 @@
 </style>
 
 @if ($breakingNews->count() > 0)
-    <section class="container">
+    <section class="container py-2">
         <div class="breaking-news-ticker">
             <div class="breaking-news-label">
                 {{ __('Breaking News') }}

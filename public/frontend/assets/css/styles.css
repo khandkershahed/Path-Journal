@@ -890,6 +890,16 @@ pre code {
         width: 62% !important;
     }
 }
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1340px
+    }
+}
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1440px
+    }
+}
 
 @media (max-width: 1400px) {
     .wrap__profile-author-detail {
