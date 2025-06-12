@@ -492,7 +492,7 @@
                                                 </ul>
                                                 <h5>
                                                     <a href="{{ route('news-details', $mostViewedNews->slug) }}">
-                                                        {{ Str::words($mostViewedNews->title, 15) }}
+                                                        {{ Str::words($mostViewedNews->title, 10) }}
                                                     </a>
                                                 </h5>
                                                 <p>
