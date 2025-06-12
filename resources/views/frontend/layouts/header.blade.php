@@ -5,30 +5,25 @@
         'language' => getLangauge(),
         'show_at_nav' => 1,
     ])->get();
-
     $categories = \App\Models\Category::where(['status' => 1, 'language' => getLangauge(), 'show_at_nav' => 0])->get();
 
 @endphp
 
 <header class="bg-light">
-
     <!-- Navbar  Top-->
     <div class="topbar d-none d-sm-block">
         <div class="container ">
             <div class="row">
                 <div class="col-sm-6 col-md-8">
                     <div class="topbar-left topbar-right d-flex">
-
                         <ul class="topbar-sosmed p-0">
                             @foreach ($socialLinks as $link)
                                 <li>
                                     <a href="{{ $link->url }}"><i class="{{ $link->icon }}"></i></a>
                                 </li>
                             @endforeach
-
                         </ul>
                         <div class="topbar-text">
-
                             {{ date('l, F j, Y') }}
                         </div>
                     </div>
@@ -44,7 +39,6 @@
                                 @endforeach
                             </select>
                         </div>
-
                         <ul class="topbar-link">
                             @if (!auth()->check())
                                 <li><a href="{{ route('login') }}">{{ __('frontend.Login') }}</a></li>
@@ -66,8 +60,6 @@
         </div>
     </div>
     <!-- End Navbar Top  -->
-
-
     <!-- Navbar  -->
     <!-- Navbar menu  -->
     <div class="navigation-wrap navigation-shadow bg-white">
@@ -206,9 +198,9 @@
                                 </li>
                             @endif
 
-                            <li class="nav-item"><a class="nav-link  text-dark" href="{{ route('about') }}">
+                            {{-- <li class="nav-item"><a class="nav-link  text-dark" href="{{ route('about') }}">
                                     {{ __('frontend.About Us') }} </a>
-                            </li>
+                            </li> --}}
                             <li class="nav-item"><a class="nav-link  text-dark" href="{{ route('contact') }}">
                                     {{ __('frontend.contact') }} </a>
                             </li>
