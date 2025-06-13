@@ -50,7 +50,10 @@
 
                     <aside class="wrapper__list__article">
                         @if (request()->has('category'))
-                            <h4 class="border_section">{{ __('frontend.Category') }}: {{ request()->category }}</h4>
+                        @php
+                            $category = $categories->where('slug', request()->category)->value('name');
+                        @endphp
+                            <h4 class="border_section">{{ __('frontend.Category') }}: {{ $category }}</h4>
                         @endif
 
                         <div class="row">
