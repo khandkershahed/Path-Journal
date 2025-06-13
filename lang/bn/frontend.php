@@ -1,7 +1,8 @@
 <?php
 
 return array (
-  'Home' => 'বাড়ি',
+  'Home' => 'হোমপেজ',
+  'Latest News' => 'সর্বশেষ খবর',
   'About' => 'সম্পর্কে',
   'Contact' => 'যোগাযোগ',
   'contact us' => 'আমাদের সাথে যোগাযোগ করুন',
