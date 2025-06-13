@@ -496,8 +496,9 @@
                                                     </a>
                                                 </h5>
                                                 <p>
-                                                    {!! Str::words($mostViewedNews->content, 10) !!}
+                                                    {!! Str::words(strip_tags($mostViewedNews->content), 10) !!}
                                                 </p>
+
                                                 <a href="{{ route('news-details', $mostViewedNews->slug) }}"
                                                     class="btn btn-outline-primary mb-4 text-capitalize">
                                                     {{ __('frontend.read more') }}
