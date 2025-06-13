@@ -77,7 +77,7 @@ class NewsController extends Controller
      */
     public function store(AdminNewsCreateRequest $request)
     {
-        /** Handle image */
+        /** Handle image */ 
         $imagePath = $this->handleFileUpload($request, 'image');
 
         $news = new News();
