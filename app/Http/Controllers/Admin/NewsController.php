@@ -77,7 +77,7 @@ class NewsController extends Controller
      */
     public function store(AdminNewsCreateRequest $request)
     {
-        /** Handle image */ 
+        /** Handle image */
         $imagePath = $this->handleFileUpload($request, 'image');
 
         $news = new News();
@@ -171,7 +171,7 @@ class NewsController extends Controller
         $news->category_id = $request->category;
         $news->image = !empty($imagePath) ? $imagePath : $news->image;
         $news->title = $request->title;
-        $news->slug = \Str::slug($request->title);
+        $news->slug = Str::slug($request->title);
         $news->content = $request->content;
         $news->meta_title = $request->meta_title;
         $news->meta_description = $request->meta_description;
