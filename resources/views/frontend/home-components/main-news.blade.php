@@ -309,7 +309,7 @@
         <div class="mt-4">
             <div class="container">
                 <div class="row">
-                    @if ($categorySectionThree->isNotEmpty() || $categorySectionFour->isNotEmpty() || $ad->home_middle_ad_status == 1)
+                    {{-- @if ($categorySectionThree->isNotEmpty() || $categorySectionFour->isNotEmpty() || $ad->home_middle_ad_status == 1) --}}
                         <div class="col-md-8">
                             @if ($categorySectionThree->isNotEmpty())
                                 <aside class="wrapper__list__article mb-0">
@@ -474,7 +474,7 @@
                                 </aside>
                             @endif
                         </div>
-                    @endif
+                    {{-- @endif --}}
 
                     <div class="col-md-4">
                         <div class="sticky-top">
@@ -658,5 +658,5 @@
                 </div>
             </div>
         </div>
-   
+
 </section>
