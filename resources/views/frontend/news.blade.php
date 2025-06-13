@@ -48,8 +48,7 @@
                         </form>
                     </div>
 
-                    <aside class="wrapper__list__article ">
-                        @dd(request()->all())
+                    <aside class="wrapper__list__article">
                         @if (request()->has('category'))
                             <h4 class="border_section">{{ __('frontend.Category') }}: {{ request()->category }}</h4>
                         @endif
