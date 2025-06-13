@@ -100,10 +100,10 @@
                                 </ul>
                             </li>
                         @endif
-                        <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">
+                        {{-- <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">
                                 {{ __('frontend.About Us') }} </a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">
-                                {{ __('frontend.contact') }} </a></li>
+                                {{ __('frontend.contact') }} </a></li> --}}
 
                     </ul>
 
@@ -201,9 +201,9 @@
                             {{-- <li class="nav-item"><a class="nav-link  text-dark" href="{{ route('about') }}">
                                     {{ __('frontend.About Us') }} </a>
                             </li> --}}
-                            <li class="nav-item"><a class="nav-link  text-dark" href="{{ route('contact') }}">
+                            {{-- <li class="nav-item"><a class="nav-link  text-dark" href="{{ route('contact') }}">
                                     {{ __('frontend.contact') }} </a>
-                            </li>
+                            </li> --}}
                         </ul>
 
                     </nav>

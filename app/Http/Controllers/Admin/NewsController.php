@@ -2,18 +2,19 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\AdminNewsCreateRequest;
-use App\Http\Requests\AdminNewsUpdateRequest;
+use App\Models\Tag;
+use App\Models\News;
 use App\Models\Category;
 use App\Models\Language;
-use App\Models\News;
-use App\Models\Tag;
-use App\Traits\FileUploadTrait;
-use Illuminate\Contracts\View\View;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use App\Traits\FileUploadTrait;
+use Illuminate\Contracts\View\View;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\AdminNewsCreateRequest;
+use App\Http\Requests\AdminNewsUpdateRequest;
 
 class NewsController extends Controller
 {
@@ -85,7 +86,7 @@ class NewsController extends Controller
         $news->auther_id = Auth::guard('admin')->user()->id;
         $news->image = $imagePath;
         $news->title = $request->title;
-        $news->slug = \Str::slug($request->title);
+        $news->slug = Str::slug($request->title);
         $news->content = $request->content;
         $news->meta_title = $request->meta_title;
         $news->meta_description = $request->meta_description;
@@ -139,7 +140,7 @@ class NewsController extends Controller
     {
         $languages = Language::all();
         $news = News::findOrFail($id);
-        
+
         if(!canAccess(['news all-access'])){
             if($news->auther_id != auth()->guard('admin')->user()->id){
                 return abort(404);
