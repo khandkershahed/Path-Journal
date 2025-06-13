@@ -146,7 +146,7 @@
                 <div class="ticker-move">
                     @foreach ($breakingNews as $news)
                         <a href="{{ route('news-details', $news->slug) }}" class="ticker-item">
-                            {{ truncate($news->title, 80) }}
+                            {{ ($news->title) }}
                         </a>
                         <span class="separator">&bull;</span>
                     @endforeach
