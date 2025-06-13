@@ -508,7 +508,7 @@
                                 @endforeach
                                 @foreach ($mostViewedPosts as $mostViewedNews)
                                     @if ($loop->index > 0)
-                                        <div class="mb-3">
+                                        <div class="mb-3 px-2">
                                             <!-- Post Article -->
                                             <div class="card__post card__post-list">
                                                 <div class="image-sm">
