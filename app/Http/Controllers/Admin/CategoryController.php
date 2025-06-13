@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\News;
+use App\Models\Category;
+use App\Models\Language;
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use Faker\Provider\ar_EG\Company;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminCategoryCreateRequest;
 use App\Http\Requests\AdminCategoryUpdateRequest;
-use App\Models\Category;
-use App\Models\Language;
-use App\Models\News;
-use Faker\Provider\ar_EG\Company;
-use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
@@ -47,7 +48,7 @@ class CategoryController extends Controller
     {
         $category = new Category();
         $category->name = $request->name;
-        $category->slug = \Str::slug($request->name);
+        $category->slug = Str::slug($request->name);
         $category->language = $request->language;
         $category->show_at_nav = $request->show_at_nav;
         $category->status = $request->status;
