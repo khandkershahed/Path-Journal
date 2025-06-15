@@ -459,7 +459,7 @@
                                                                 </a>
                                                             </h5>
                                                             <p class="d-none d-lg-block d-xl-block mb-0">
-                                                                {!! Str::words(strip_tags($sectionFourNews->content), 10) !!}
+                                                                {!! Str::words(strip_tags($sectionFourNews->content), 20) !!}
                                                             </p>
                                                         </div>
                                                     </div>
