@@ -12547,7 +12547,8 @@ input[type="number"] {
 
 .popular__news-right .card__post .card__post__body img {
     position: relative;
-    height: 230px
+    height: 226px
+    /* height: 230px */
 }
 
 @media screen and (min-width: 320px) and (max-width: 575px) {
