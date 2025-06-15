@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-                        <div class="card__post-carousel px-2">
+                        <div class="card__post-carousel px-1">
                             @foreach ($heroSlider as $slider)
                                 @if ($loop->index <= 4)
                                     <div class="item">
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="popular__news-right px-2">
+                        <div class="popular__news-right px-1">
                             <!-- Post Article -->
                             @foreach ($heroSlider as $slider)
                                 @if ($loop->index > 4 && $loop->index <= 6)
