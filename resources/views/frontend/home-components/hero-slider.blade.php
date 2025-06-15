@@ -3,9 +3,9 @@
         <!-- Popular news  header-->
         <div class="popular__news-header">
             <div class="container">
-                <div class="row">
+                <div class="row no-gutters">
                     <div class="col-md-8">
-                        <div class="card__post-carousel px-1">
+                        <div class="card__post-carousel px-2">
                             @foreach ($heroSlider as $slider)
                                 @if ($loop->index <= 4)
                                     <div class="item">
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="popular__news-right px-1">
+                        <div class="popular__news-right px-2">
                             <!-- Post Article -->
                             @foreach ($heroSlider as $slider)
                                 @if ($loop->index > 4 && $loop->index <= 6)
