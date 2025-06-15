@@ -85,7 +85,7 @@
         display: inline-block;
         white-space: nowrap;
         padding-left: 100%;
-        animation: ticker-scroll 40s linear infinite;
+        animation: ticker-scroll 80s linear infinite;
     }
 
     .ticker-item {
