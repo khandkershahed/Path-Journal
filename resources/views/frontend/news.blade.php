@@ -150,7 +150,7 @@
                                                         <div class="card__post__title">
                                                             <h6>
                                                                 <a href="{{ route('news-details', $news->slug) }}">
-                                                                    {!! truncate($news->title) !!}
+                                                                    {!! Str::words(strip_tags($news->title), 5) !!}
                                                                 </a>
                                                             </h6>
                                                         </div>
@@ -188,7 +188,7 @@
                                                 </ul>
                                                 <h5>
                                                     <a href="{{ route('news-details', $news->slug) }}">
-                                                        {!! truncate($news->title) !!}
+                                                        {!! Str::words(strip_tags($news->title), 5) !!}
                                                     </a>
                                                 </h5>
                                                 <p>

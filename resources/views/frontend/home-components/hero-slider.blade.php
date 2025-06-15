@@ -73,11 +73,11 @@
                                                 </div>
                                                 <div class="card__post__author-info">
                                                     <ul class="list-inline">
-                                                        <li class="list-inline-item">
+                                                        {{-- <li class="list-inline-item">
                                                             <a href="javascript:;">
                                                                 by {{ $slider->auther->name }}
                                                             </a>
-                                                        </li>
+                                                        </li> --}}
                                                         <li class="list-inline-item">
                                                             <span>
                                                                 {{ date('M d, Y', strtotime($slider->created_at)) }}
