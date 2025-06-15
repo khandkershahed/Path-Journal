@@ -2,21 +2,22 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
-use App\Mail\ContactMail;
-use App\Models\About;
 use App\Models\Ad;
-use App\Models\Category;
+use App\Models\Tag;
+use App\Models\News;
+use App\Models\About;
 use App\Models\Comment;
 use App\Models\Contact;
-use App\Models\HomeSectionSetting;
-use App\Models\News;
-use App\Models\RecivedMail;
-use App\Models\SocialCount;
+use App\Models\Category;
+use App\Mail\ContactMail;
 use App\Models\SocialLink;
 use App\Models\Subscriber;
-use App\Models\Tag;
+use App\Models\RecivedMail;
+use App\Models\SocialCount;
 use Illuminate\Http\Request;
+use App\Models\HomeSectionSetting;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
@@ -25,16 +26,16 @@ class HomeController extends Controller
     public function index()
     {
         $breakingNews = News::where(['is_breaking_news' => 1,])
-            ->activeEntries()->withLocalize()->orderBy('id', 'DESC')->take(10)->get();
+            ->activeEntries()->withLocalize()->latest('id')->take(10)->get();
         $heroSlider = News::with(['category', 'auther'])
             ->where('show_at_slider', 1)
             ->activeEntries()
             ->withLocalize()
-            ->orderBy('id', 'DESC')->take(7)
+            ->latest('id')->take(7)
             ->get();
- 
+
         $recentNews = News::with(['category', 'auther'])->activeEntries()->withLocalize()
-            ->orderBy('id', 'DESC')->take(6)->get();
+            ->latest('id')->take(6)->get();
         $popularNews = News::with(['category'])->where('show_at_popular', 1)
             ->activeEntries()->withLocalize()
             ->orderBy('updated_at', 'DESC')->take(4)->get();
@@ -44,25 +45,25 @@ class HomeController extends Controller
         if($HomeSectionSetting){
             $categorySectionOne = News::where('category_id', $HomeSectionSetting->category_section_one)
                 ->activeEntries()->withLocalize()
-                ->orderBy('id', 'DESC')
+                ->latest('id')
                 ->take(8)
                 ->get();
 
         $categorySectionTwo = News::where('category_id', $HomeSectionSetting->category_section_two)
             ->activeEntries()->withLocalize()
-            ->orderBy('id', 'DESC')
+            ->latest('id')
             ->take(8)
             ->get();
 
         $categorySectionThree = News::where('category_id', $HomeSectionSetting->category_section_three)
             ->activeEntries()->withLocalize()
-            ->orderBy('id', 'DESC')
+            ->latest('id')
             ->take(6)
             ->get();
 
         $categorySectionFour = News::where('category_id', $HomeSectionSetting->category_section_four)
             ->activeEntries()->withLocalize()
-            ->orderBy('id', 'DESC')
+            ->latest('id')
             ->take(4)
             ->get();
         }else {
@@ -105,7 +106,7 @@ class HomeController extends Controller
 
 
         $news = News::with(['auther', 'tags', 'comments'])->where('slug', $slug)
-        ->activeEntries()->withLocalize()
+        ->activeEntries()->withLocalize()->orderBy('id', 'DESC')
         ->first();
 
         $this->countView($news);
@@ -118,7 +119,7 @@ class HomeController extends Controller
         $nextPost = News::where('id', '>', $news->id)
             ->activeEntries()
             ->withLocalize()
-            ->orderBy('id', 'asc')->first();
+            ->orderBy('id', 'DESC')->first();
 
         $previousPost = News::where('id', '<', $news->id)
             ->activeEntries()
@@ -130,6 +131,7 @@ class HomeController extends Controller
             ->activeEntries()
             ->withLocalize()
             ->take(5)
+            ->orderBy('id', 'DESC')
             ->get();
 
         $socialCounts = SocialCount::where(['status' => 1, 'language' => getLangauge()])->get();
@@ -169,7 +171,7 @@ class HomeController extends Controller
 
 
         $recentNews = News::with(['category', 'auther'])
-            ->activeEntries()->withLocalize()->orderBy('id', 'DESC')->take(4)->get();
+            ->activeEntries()->withLocalize()->latest('id')->take(4)->get();
         $mostCommonTags = $this->mostCommonTags();
 
         $categories = Category::where(['status' => 1, 'language' => getLangauge()])->get();
@@ -200,7 +202,7 @@ class HomeController extends Controller
 
     public function mostCommonTags()
     {
-        return Tag::select('name', \DB::raw('COUNT(*) as count'))
+        return Tag::select('name', DB::raw('COUNT(*) as count'))
             ->where('language', getLangauge())
             ->groupBy('name')
             ->orderByDesc('count')

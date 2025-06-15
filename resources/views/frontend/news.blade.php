@@ -89,7 +89,7 @@
                                                 </a>
                                             </h5>
                                             <p>
-                                                {!! truncate($post->content, 100) !!}
+                                                {!! Str::words(strip_tags($post->content), 15) !!}
                                             </p>
                                             <a href="{{ route('news-details', $post->slug) }}"
                                                 class="btn btn-outline-primary mb-4 text-capitalize">
@@ -192,7 +192,7 @@
                                                     </a>
                                                 </h5>
                                                 <p>
-                                                    {!! truncate($news->content, 100) !!}
+                                                    {!! Str::words(strip_tags($news->content), 15) !!}
                                                 </p>
                                                 <a href="{{ route('news-details', $news->slug) }}"
                                                     class="btn btn-outline-primary mb-4 text-capitalize">
