@@ -30,10 +30,10 @@
                                                     <div class="card__post__author-info">
                                                         <ul class="list-inline">
                                                             {{-- <li class="list-inline-item">
-                                                            <a href="javascript:;">
-                                                                {{ __('frontend.by') }} {{ $slider->auther->name }}
-                                                            </a>
-                                                        </li> --}}
+                                                                <a href="javascript:;">
+                                                                    {{ __('frontend.by') }} {{ $slider->auther->name }}
+                                                                </a>
+                                                            </li> --}}
                                                             <li class="list-inline-item">
                                                                 <span>
 
@@ -44,8 +44,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-
                                         </div>
                                     </div>
                                 @endif
