@@ -55,7 +55,7 @@
                             <!-- Post Article -->
                             @foreach ($heroSlider as $slider)
                                 @if ($loop->index > 4 && $loop->index <= 6)
-                                    <div class="card__post ">
+                                    <div class="card__post mb-1">
                                         <div class="card__post__body card__post__transition">
                                             <a href="{{ route('news-details', $slider->slug) }}">
                                                 <img src="{{ asset($slider->image) }}" class="img-fluid" alt="">
@@ -87,7 +87,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 @endif
                             @endforeach
