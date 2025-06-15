@@ -3,8 +3,8 @@
         <!-- Popular news  header-->
         <div class="popular__news-header">
             <div class="container">
-                <div class="row no-gutters">
-                    <div class="col-md-8 ">
+                <div class="row">
+                    <div class="col-md-8">
                         <div class="card__post-carousel">
                             @foreach ($heroSlider as $slider)
                                 @if ($loop->index <= 4)
