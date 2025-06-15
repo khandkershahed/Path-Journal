@@ -85,7 +85,7 @@
                                             </ul>
                                             <h5>
                                                 <a href="{{ route('news-details', $post->slug) }}">
-                                                    {!! truncate($post->title) !!}
+                                                    {!! Str::words(strip_tags($post->title), 5) !!}
                                                 </a>
                                             </h5>
                                             <p>
