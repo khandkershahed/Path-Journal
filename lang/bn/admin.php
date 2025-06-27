@@ -370,6 +370,7 @@ return array (
   'Frontend Localization' => 'Frontend Localization',
   'Create News' => 'Create News',
   'Image' => 'Image',
+  'Image Caption' => 'Image Caption',
   'Choose File' => 'Choose File',
   'Ttile' => 'Title',
   'Content' => 'Content',

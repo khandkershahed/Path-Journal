@@ -25,6 +25,7 @@ class AdminNewsCreateRequest extends FormRequest
             'language' => ['required'],
             'category' => ['required'],
             'image' => ['required', 'max:3000', 'image'],
+            'image_caption' => ['required'],
             'title' => ['required', 'max:255', 'unique:news,title'],
             'content' => ['required'],
             'meta_title' => ['max:255'],

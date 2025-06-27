@@ -11,6 +11,14 @@
 @section('meta_tw_image', asset($news->image))
 <!-- End Setting metas -->
 @section('content')
+<style>
+    .wrap__article-detail-image-caption{
+        font-size: 14px;
+        background: #dadada;
+        padding: 10px 15px;
+        text-align: left;
+    }
+</style>
 <section class="pb-80">
     <div class="container">
         <div class="row">
@@ -67,9 +75,12 @@
                     </div>
 
                     <div class="wrap__article-detail-image mt-4">
-                        <figure>
+                        <figure class="mb-0">
                             <img src="{{ asset($news->image) }}" alt="" class="img-fluid">
                         </figure>
+                        <figcaption class="wrap__article-detail-image-caption">
+                            {{ $news->image_caption }}
+                        </figcaption>
                     </div>
                     <div class="wrap__article-detail-content">
                         <div class="total-views">

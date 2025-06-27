@@ -9,7 +9,7 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void 
+    public function up(): void
     {
         Schema::create('news', function (Blueprint $table) {
             $table->id();
@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
             $table->foreignId('auther_id')->constrained('admins');
             $table->text('image');
+            $table->text('image_caption')->nullable();
             $table->string('title');
             $table->text('slug');
             $table->text('content');

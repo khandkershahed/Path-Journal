@@ -51,6 +51,14 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="">{{ __('Image Caption') }}</label>
+                        <input name="image_caption" type="text" class="form-control" id="image_caption" required>
+                        @error('image_caption')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
                         <label for="">{{ __('admin.Ttile') }}</label>
                         <input name="title" type="text" class="form-control" id="name">
                         @error('title')

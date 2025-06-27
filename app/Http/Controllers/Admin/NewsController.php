@@ -85,6 +85,7 @@ class NewsController extends Controller
         $news->category_id = $request->category;
         $news->auther_id = Auth::guard('admin')->user()->id;
         $news->image = $imagePath;
+        $news->image_caption = $request->image_caption;
         $news->title = $request->title;
         $news->slug = Str::slug($request->title);
         $news->content = $request->content;
@@ -170,6 +171,7 @@ class NewsController extends Controller
         $news->language = $request->language;
         $news->category_id = $request->category;
         $news->image = !empty($imagePath) ? $imagePath : $news->image;
+        $news->image_caption = $request->image_caption;
         $news->title = $request->title;
         $news->slug = Str::slug($request->title);
         $news->content = $request->content;
