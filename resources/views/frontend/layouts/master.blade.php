@@ -5,13 +5,29 @@
     <meta charset="utf-8">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-    <title>@hasSection('title') @yield('title') @else {{ $settings['site_seo_title'] }} @endif </title>
-    <meta name="description" content="@hasSection('meta_description') @yield('meta_description') @else {{ $settings['site_seo_description'] }} @endif " />
+    <title>
+        @hasSection('title')
+            @yield('title')
+        @else
+            {{ $settings['site_seo_title'] }}
+        @endif
+    </title>
+    <meta name="description"
+        content="@hasSection('meta_description')
+@yield('meta_description')
+@else
+{{ $settings['site_seo_description'] }}
+@endif " />
     <meta name="keywords" content="{{ $settings['site_seo_keywords'] }}" />
 
     <meta name="og:title" content="@yield('meta_og_title')" />
     <meta name="og:description" content="@yield('meta_og_description')" />
-    <meta name="og:image" content="@hasSection('meta_og_image') @yield('meta_og_image') @else {{ asset($settings['site_logo']) }} @endif" />
+    <meta name="og:image"
+        content="@hasSection('meta_og_image')
+@yield('meta_og_image')
+@else
+{{ asset($settings['site_logo']) }}
+@endif" />
     <meta name="twitter:title" content="@yield('meta_tw_title')" />
     <meta name="twitter:description" content="@yield('meta_tw_description')" />
     <meta name="twitter:image" content="@yield('meta_tw_image')" />
@@ -21,6 +37,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     {{-- <link href="{{ asset('frontend/assets/css/custom.css') }}" rel="stylesheet"> --}}
     <link href="{{ asset('frontend/assets/css/styles.css?v=' . time()) }}" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3J5T3JJVFH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-3J5T3JJVFH');
+    </script>
     <style>
         :root {
             --colorPrimary: {{ $settings['site_color'] }};
@@ -37,9 +63,18 @@
         $footerGridOne = \App\Models\FooterGridOne::where(['status' => 1, 'language' => getLangauge()])->get();
         $footerGridTwo = \App\Models\FooterGridTwo::where(['status' => 1, 'language' => getLangauge()])->get();
         $footerGridThree = \App\Models\FooterGridThree::where(['status' => 1, 'language' => getLangauge()])->get();
-        $footerGridOneTitle = \App\Models\FooterTitle::where(['key' => 'grid_one_title', 'language' => getLangauge()])->first();
-        $footerGridTwoTitle = \App\Models\FooterTitle::where(['key' => 'grid_two_title', 'language' => getLangauge()])->first();
-        $footerGridThreeTitle = \App\Models\FooterTitle::where(['key' => 'grid_three_title', 'language' => getLangauge()])->first();
+        $footerGridOneTitle = \App\Models\FooterTitle::where([
+            'key' => 'grid_one_title',
+            'language' => getLangauge(),
+        ])->first();
+        $footerGridTwoTitle = \App\Models\FooterTitle::where([
+            'key' => 'grid_two_title',
+            'language' => getLangauge(),
+        ])->first();
+        $footerGridThreeTitle = \App\Models\FooterTitle::where([
+            'key' => 'grid_three_title',
+            'language' => getLangauge(),
+        ])->first();
     @endphp
 
     <!-- Header news -->
