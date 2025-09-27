@@ -122,7 +122,7 @@
 
     <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
 
-    <script type="text/javascript" src="{{ asset('frontend/assets/js/index.bundle.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('frontend/assets/js/index.bundle.js?v=' . time()) }}"></script>
     @include('sweetalert::alert')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
