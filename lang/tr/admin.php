@@ -97,7 +97,7 @@ return array (
   'Profile' => 'Profil',
   'Settings' => 'Ayarlar',
   'Logout' => 'Oturumu kapat',
-  'Stisla' => 'Stisla',
+  'PNN24 News' => 'PNN24 News',
   'St' => 'Sokak',
   'Dashboard' => 'Kontrol paneli',
   'Starter' => 'Başlangıç',

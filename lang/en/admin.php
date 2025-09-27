@@ -109,7 +109,7 @@ return array (
   'Logout' => 'Logout',
   'ThePathJournal' => 'ThePathJournal',
   'TPJ' => 'TPJ',
-  'Stisla' => 'Stisla',
+  'PNN24 News' => 'PNN24 News',
   'St' => 'St',
   'Starter' => 'Starter',
   'News' => 'News',
