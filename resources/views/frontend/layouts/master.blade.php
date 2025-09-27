@@ -19,7 +19,8 @@
 @yield('meta_description')
 @else
 {{ $settings['site_seo_description'] }}
-@endif " />
+@endif
+" />
     <meta name="keywords" content="{{ $settings['site_seo_keywords'] }}" />
 
     <meta name="og:title" content="@yield('meta_og_title')" />
@@ -121,7 +122,8 @@
 
 
     <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
-
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{{ asset('frontend/assets/js/index.bundle.js') }}"></script>
     @include('sweetalert::alert')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
