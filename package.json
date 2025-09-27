@@ -1,4 +1,5 @@
 {
+    "name": "pnn24-news",
     "private": true,
     "type": "module",
     "scripts": {
