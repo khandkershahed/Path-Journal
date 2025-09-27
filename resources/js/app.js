@@ -32,3 +32,5 @@ $(function() {
         // Add or adjust options as you like
     });
 });
+import 'select2/dist/css/select2.css'; // CSS for Select2
+import 'select2';  // JS for Select2
