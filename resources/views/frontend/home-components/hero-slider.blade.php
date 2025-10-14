@@ -13,7 +13,7 @@
                                         <div class="card__post">
                                             <div class="card__post__body">
                                                 <a href="{{ route('news-details', $slider->slug) }}">
-                                                    <img src="{{ asset($slider->image) }}" class="img-fluid"
+                                                    <img src="{{ asset($slider->image) }}" loading="lazy" class="img-fluid"
                                                         alt="">
                                                 </a>
                                                 <div class="card__post__content bg__post-cover">
@@ -61,7 +61,7 @@
                                     <div class="card__post mb-2">
                                         <div class="card__post__body card__post__transition">
                                             <a href="{{ route('news-details', $slider->slug) }}">
-                                                <img src="{{ asset($slider->image) }}" class="img-fluid" alt="">
+                                                <img src="{{ asset($slider->image) }}" loading="lazy" class="img-fluid" alt="">
                                             </a>
                                             <div class="card__post__content bg__post-cover">
                                                 {{-- <div class="card__post__category">

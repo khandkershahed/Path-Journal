@@ -16,7 +16,7 @@
                                             <div class="card__post ">
                                                 <div class="card__post__body card__post__transition">
                                                     <a href="{{ route('news-details', $news->slug) }}">
-                                                        <img src="{{ asset($news->image) }}" class="img-fluid"
+                                                        <img src="{{ asset($news->image) }}" loading="lazy" class="img-fluid"
                                                             alt="">
                                                     </a>
                                                     <div class="card__post__content bg__post-cover">
@@ -67,7 +67,7 @@
                                                     <div class="card__post card__post-list">
                                                         <div class="image-sm">
                                                             <a href="{{ route('news-details', $news->slug) }}">
-                                                                <img src="{{ asset($news->image) }}" class="img-fluid"
+                                                                <img src="{{ asset($news->image) }}" loading="lazy" class="img-fluid"
                                                                     alt="">
                                                             </a>
                                                         </div>
@@ -120,7 +120,7 @@
                                                     <div class="card__post card__post-list">
                                                         <div class="image-sm">
                                                             <a href="{{ route('news-details', $news->slug) }}">
-                                                                <img src="{{ asset($news->image) }}" class="img-fluid"
+                                                                <img src="{{ asset($news->image) }}" loading="lazy" class="img-fluid"
                                                                     alt="">
                                                             </a>
                                                         </div>
@@ -226,7 +226,7 @@
                                 <div class="article__entry">
                                     <div class="article__image">
                                         <a href="{{ route('news-details', $sectionOneNews->slug) }}">
-                                            <img src="{{ asset($sectionOneNews->image) }}" alt=""
+                                            <img src="{{ asset($sectionOneNews->image) }}" loading="lazy" alt=""
                                                 class="img-fluid">
                                         </a>
                                     </div>
@@ -284,7 +284,7 @@
                                 <div class="article__entry">
                                     <div class="article__image">
                                         <a href="{{ route('news-details', $sectionTwoNews->slug) }}">
-                                            <img src="{{ asset($sectionTwoNews->image) }}" alt=""
+                                            <img src="{{ asset($sectionTwoNews->image) }}" alt="" loading="lazy"
                                                 class="img-fluid">
                                         </a>
                                     </div>
@@ -345,7 +345,7 @@
                                                     <div class="article__image">
                                                         <a
                                                             href="{{ route('news-details', $sectionThreeNews->slug) }}">
-                                                            <img src="{{ asset($sectionThreeNews->image) }}"
+                                                            <img src="{{ asset($sectionThreeNews->image) }}" loading="lazy"
                                                                 alt="" class="img-fluid">
                                                         </a>
                                                     </div>
@@ -390,7 +390,7 @@
                                                     <div class="article__image">
                                                         <a
                                                             href="{{ route('news-details', $sectionThreeNews->slug) }}">
-                                                            <img src="{{ asset($sectionThreeNews->image) }}"
+                                                            <img src="{{ asset($sectionThreeNews->image) }}" loading="lazy"
                                                                 alt="" class="img-fluid">
                                                         </a>
                                                     </div>
@@ -433,7 +433,7 @@
                         <div class="small_add_banner">
                             <div class="small_add_banner_img">
                                 <a href="{{ $ad->home_middle_ad_url }}">
-                                    <img src="{{ asset($ad->home_middle_ad) }}" alt="adds">
+                                    <img src="{{ asset($ad->home_middle_ad) }}" loading="lazy" alt="adds">
                                 </a>
                             </div>
                         </div>
@@ -451,7 +451,7 @@
                                             <div class="col-md-5">
                                                 <div class="card__post__transition">
                                                     <a href="{{ route('news-details', $sectionFourNews->slug) }}">
-                                                        <img src="{{ asset($sectionFourNews->image) }}"
+                                                        <img src="{{ asset($sectionFourNews->image) }}" loading="lazy"
                                                             class="img-fluid w-100" alt="">
                                                     </a>
                                                 </div>
@@ -517,7 +517,7 @@
                                             <div class="article__entry">
                                                 <div class="article__image">
                                                     <a href="{{ route('news-details', $mostViewedNews->slug) }}">
-                                                        <img src="{{ asset($mostViewedNews->image) }}" alt=""
+                                                        <img src="{{ asset($mostViewedNews->image) }}" loading="lazy" alt=""
                                                             class="img-fluid">
                                                     </a>
                                                 </div>
@@ -566,7 +566,7 @@
                                                 <div class="card__post card__post-list">
                                                     <div class="image-sm">
                                                         <a href="{{ route('news-details', $mostViewedNews->slug) }}">
-                                                            <img src="{{ asset($mostViewedNews->image) }}"
+                                                            <img src="{{ asset($mostViewedNews->image) }}" loading="lazy"
                                                                 class="img-fluid" alt="">
                                                         </a>
                                                     </div>
@@ -658,7 +658,7 @@
                                 <h4 class="border_section">{{ __('frontend.Advertise') }}</h4>
                                 <a href="{{ $ad->side_bar_ad_url }}">
                                     <figure>
-                                        <img src="{{ asset($ad->side_bar_ad) }}" alt="" class="img-fluid">
+                                        <img src="{{ asset($ad->side_bar_ad) }}" loading="lazy" alt="" class="img-fluid">
                                     </figure>
                                 </a>
                             </aside>

@@ -16,7 +16,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="large_add_banner_img">
-                                <img src="{{ $ad->home_top_bar_ad }}" alt="adds">
+                                <img src="{{ $ad->home_top_bar_ad }}" loading="lazy" alt="adds">
                             </div>
                         </div>
                     </div>
